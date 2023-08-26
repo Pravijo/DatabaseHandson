@@ -8,6 +8,7 @@ class Table:
     def create(self):
         c.execute("create table grocerylist(ino int,iname varchar(20),idept varchar(20),icount int)")
         dbconnection.commit()
+        dbconnection.close()
 
     def insert(self):
         itemno=int(input("enter ino: "))
